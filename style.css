@@ -1,0 +1,289 @@
+/*************HEADER AND FOOTER********************/
+header,footer{
+    background-color:rgb(65, 78, 18);
+}
+footer{
+padding-top: 20px;
+padding-bottom: 20px;
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+}
+/************NAVBAR*********************/
+.navbar-spacer {
+    flex: 3;
+}
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+.nav-link{
+    font-family:'Roboto Slab', serif;
+    font-size: 15px; 
+}
+/*************CONTACT ICONS**********************/
+.icon-container {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+.icon-container i {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: darkgray;
+}
+.icon-container a {
+    text-decoration: none;
+}
+/*****************BACKGROUND VIDEO****************/
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/***************CONTENT IN BACKGROUND VIDEO***************/
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    /*position: absolute;*/
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding-top: 600px;
+}
+.content-inner {
+    max-width: 100%;
+    /*padding: 0 20px;*/
+    text-align: center;
+}
+.content-inner h1 {
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: -50px;
+    z-index: 2;
+    justify-content: center;
+    font-family:'Roboto Slab', serif;
+    letter-spacing: 0.1em;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px;
+    color: black;
+    background-color: #aecbf5ba;
+}
+.overview h5{
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
+    height: 150px;
+    font-family:'Roboto Slab', serif;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: #aecbf5ba;
+    height: 315px;
+    padding: 32% 0;
+}
+@media (max-width: 900px) {
+    .video-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  
+    .content-inner {
+      padding: 50px 20px;
+      text-align: center;
+      max-width: 800px;
+      width: 100%;
+      margin: auto; /* Add this property */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .video-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  
+    .content-inner {
+      padding: 50px 20px;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      margin: auto; /* Add this property */
+    }
+  }
+  
+  
+/*********************SCROLL-DOWN ARROW****************/
+.scroll-down-arrow {
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.scroll-down-arrow span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 20px solid black;
+    margin-bottom: 10px;
+    animation: scrollAnimation 2s infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes scrollAnimation {
+    0% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+    50% {
+    transform: translateY(10px);
+    opacity: 0.5;
+    }
+    100% {
+    transform: translateY(20px);
+    opacity: 0;
+    }
+}
+/******************SECTIONS**************/
+.tourism, .big_five,.info,.change,.parks_links{
+    border: 20px solid lightgray;
+    padding: 30px;
+    background-color: lightgrey;
+}
+/*****************H2*************************/
+h2{
+    display: flex;
+    justify-content: center;
+    font-family:'Roboto Slab', serif;
+    letter-spacing: 0.1em;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px;
+    text-align: justify;
+    }
+/*********************TOURISM SECTION**************/
+.tourism .row .col-md-3 {
+    position: relative;
+    overflow: hidden;
+}
+.tourism .row .col-md-3 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+.tourism .row{
+    margin-left: 50px;
+}
+.overlay {
+    padding: 10px;
+}
+.img_04{
+    background-image: url(img/mount-kilimanjaro.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh; 
+    filter: blur(px); 
+    border: 5px;
+}
+.img_05{
+    background-image: url(img/zebras.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh; 
+    filter: blur(px); 
+    border: 5px;
+}
+.img_06{
+    background-image: url(img/dolphin.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    filter: blur(px); 
+    border: 5px;
+}
+.overlay p{
+    font-family:'Roboto Slab', serif;
+    font-size: 20px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.623);
+}
+/******************BIG FIVE SECTION **************/
+.carousel-inner h5{
+    font-family:'Roboto Slab', serif;
+    letter-spacing: 0.1em;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px;
+    text-align: justify;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.623);
+    display: flex;
+    justify-content: center;
+} 
+.carousel-inner p{
+    font-family:'Roboto Slab', serif;
+    font-size: 20px;
+    text-align: justify;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+/*******************INFO SECTION***************/
+.info img{
+    height: 200px; 
+    }
+    .info h5{
+        height: 80px;
+        margin-bottom: 20px;
+    }
+/*****************PARKS AND RESERVES SECTION***************/
+.parks_links h2{
+    font-size: 25px; 
+}
+.scroll-container {
+    max-height: 245px; 
+    overflow-y: scroll;
+}
+
+
+
+
+
